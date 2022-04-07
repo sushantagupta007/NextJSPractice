@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const blogId = () => {
@@ -6,9 +7,14 @@ const blogId = () => {
   //if I write blog/1 = It will work.
   //Even I write blog/1000 = It will work.
 
+  //*To get the id we will use useRoute hook */
+  //useRouter hook returns an object
+
+  const router = useRouter();
+  const id = router.query.blogId;
   return (
     <div>
-      <h1> Individual Blog </h1>
+      <h1> Individual Blog Number {id} </h1>
     </div>
   );
 };
