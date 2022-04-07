@@ -10,6 +10,7 @@ const blogId = () => {
   //*To get the id we will use useRoute hook */
   //useRouter hook returns an object
 
+  //
   const router = useRouter();
   const id = router.query.blogId;
   return (
