@@ -1,6 +1,9 @@
 import { useRouter } from "next/router";
 import React from "react";
 
+//if we use [...params].js  then /doc will not work but
+// if we use [[...parsms]].js, then /doc will work.
+
 const Doc = () => {
   const router = useRouter();
   const { params = [] } = router.query;
